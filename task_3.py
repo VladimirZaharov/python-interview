@@ -1,10 +1,10 @@
 class ItemDiscount:
-    product = "phone"
-    price = 12000
+    __product = "phone"
+    __price = 12000
 
 class ItemDiscountReport(ItemDiscount):
     def get_parent_data(self):
-        print(f'{self.product} - {self.price}')
+        print(f'{self._ItemDiscount__product} - {self._ItemDiscount__price}')
 
 a = ItemDiscount()
 b = ItemDiscountReport()

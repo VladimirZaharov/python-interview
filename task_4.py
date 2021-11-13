@@ -9,3 +9,7 @@ class ItemDiscountReport(ItemDiscount):
 a = ItemDiscount()
 b = ItemDiscountReport()
 b.get_parent_data()
+ItemDiscount.price = 15000
+a = ItemDiscount()
+b = ItemDiscountReport()
+b.get_parent_data()
