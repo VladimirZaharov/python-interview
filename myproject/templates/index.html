@@ -3,29 +3,18 @@
 <table>
     <tr>
         <th>
-            name
+            category
         </th>
-        <th>
-            recieve_date
-        </th>
-        <th>
-            price
-        </th>
-        <th>
-            unit
-        </th>
-        <th>
-            producer
-        </th>
+
     </tr>
-{% for object in object_list %}
+
     <tr>
-        <td>{{ object.name }}</td>
-        <td>{{ object.recieve_date }}</td>
-        <td>{{ object.price }}</td>
-        <td>{{ object.unit }}</td>
-        <td>{{ object.producer }}</td>
-    </tr>
+        <td>
+            <a href="{% url 'myapp:ecectronic' %}">Электроника</a>
+        </td>
+         <td>
+            <a href="{% url 'myapp:wear' %}">Одежда</a>
+        </td>
 {% endfor %}
 </table>
 {% endblock %}
