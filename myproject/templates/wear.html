@@ -19,13 +19,15 @@
         </th>
     </tr>
 {% for object in object_list %}
-    <tr>
-        <td>{{ object.name }}</td>
-        <td>{{ object.recieve_date }}</td>
-        <td>{{ object.price }}</td>
-        <td>{{ object.unit }}</td>
-        <td>{{ object.producer }}</td>
-    </tr>
+    {% if object.category == 'wear' %}
+        <tr>
+            <td>{{ object.product.name }}</td>
+            <td>{{ object.product.recieve_date }}</td>
+            <td>{{ object.product.price }}</td>
+            <td>{{ object.product.unit }}</td>
+            <td>{{ object.product.producer }}</td>
+        </tr>
+    {% endif %}
 {% endfor %}
 </table>
 {% endblock %}

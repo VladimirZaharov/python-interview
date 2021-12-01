@@ -6,6 +6,6 @@ app_name= 'myapp'
 
 urlpatterns = [
     path('', MyModelView.as_view(), name='index'),
-    path('', ElectronicView.as_view(), name='electronic'),
-    path('', WearView.as_view(), name='wear')
+    path('electronic/', ElectronicView.as_view(), name='electronic'),
+    path('wear/', WearView.as_view(), name='wear')
 ]

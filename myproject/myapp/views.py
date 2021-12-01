@@ -12,9 +12,9 @@ class MyModelView(ListView):
 class ElectronicView(ListView):
     model = CategoriesModel
     template_name = 'electronic.html'
-    queryset = CategoriesModel.objects.select_related('cat').prefetch_related('электроника')
+    queryset = CategoriesModel.objects.prefetch_related('product').all()
 
 class WearView(ListView):
     model = CategoriesModel
     template_name = 'wear.html'
-    queryset = CategoriesModel.objects.select_related('cat').prefetch_related('одежда')
+    queryset = CategoriesModel.objects.prefetch_related('product').all()

@@ -14,6 +14,7 @@ class MyAppModel(models.Model):
 class CategoriesModel(models.Model):
     category = models.CharField(max_length=64, default='Unknown')
     product = models.ManyToManyField(MyAppModel, related_name='cat')
+    some_model = models.CharField(max_length=64, default='Unknown')
 
     def __str__(self):
         return self.category
