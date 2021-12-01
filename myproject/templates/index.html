@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<table>
+    <tr>
+        <th>
+            category
+        </th>
+
+    </tr>
+
+    <tr>
+        <td>
+            <a href="{% url 'myapp:electronic' %}">Электроника</a>
+        </td>
+         <td>
+            <a href="{% url 'myapp:wear' %}">Одежда</a>
+        </td>
+</table>
+{% endblock %}
