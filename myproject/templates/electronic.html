@@ -19,8 +19,10 @@
         </th>
     </tr>
 {% for object in object_list %}
+    {{object}}
     {% if object.category == 'electronic' %}
         <tr>
+            <td>{{ object.product.site }}</td>
             <td>{{ object.product.name }}</td>
             <td>{{ object.product.recieve_date }}</td>
             <td>{{ object.product.price }}</td>
