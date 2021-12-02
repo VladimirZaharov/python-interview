@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<table>
+    <tr>
+        <th>
+            name
+        </th>
+        <th>
+            recieve_date
+        </th>
+        <th>
+            price
+        </th>
+        <th>
+            unit
+        </th>
+        <th>
+            producer
+        </th>
+    </tr>
+{% for object in object_list %}
+    {% if object.category == 'wear' %}
+        <tr>
+            <td>{{ object.product.site }}</td>
+            <td>{{ object.product.name }}</td>
+            <td>{{ object.product.recieve_date }}</td>
+            <td>{{ object.product.price }}</td>
+            <td>{{ object.product.unit }}</td>
+            <td>{{ object.product.producer }}</td>
+        </tr>
+    {% endif %}
+{% endfor %}
+</table>
+{% endblock %}
